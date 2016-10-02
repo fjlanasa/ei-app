@@ -57,7 +57,8 @@ class Word extends Component {
 
   render(){
     return (
-        <li>
+      <div className="small-4 columns">
+        <li className="rootWord">
         <div onClick={this.handleClick}>
           {this.props.name}
         </div>
@@ -71,8 +72,7 @@ class Word extends Component {
             <SecondLevelWordList handleChildClick={this.props.handleChildClick} words={this.state.next_level_words} />
           </div>
         </li>
-
-
+      </div>
     );
   }
 };

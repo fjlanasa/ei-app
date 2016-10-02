@@ -9,6 +9,19 @@ ul{
   display: inline;
 }
 
+li{
+
+}
+
 li:first-letter{
+  text-transform: uppercase;
+}
+
+.content{
+  float:right;
+}
+
+.rootWord:first-letter{
+  display: inline;
   text-transform: uppercase;
 }
