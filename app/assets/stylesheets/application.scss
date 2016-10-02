@@ -1,2 +1,14 @@
 // @import "*";
+@import "foundation_and_overrides";
 
+.hidden{
+  display: none;
+}
+
+ul{
+  display: inline;
+}
+
+li:first-letter{
+  text-transform: uppercase;
+}
