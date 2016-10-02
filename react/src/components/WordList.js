@@ -18,7 +18,7 @@ const WordList = props => {
   });
 
   return (
-    <ul className="inline-list">
+    <ul className="rootWordList">
       {words}
     </ul>
   );
