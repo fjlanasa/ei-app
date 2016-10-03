@@ -18,9 +18,10 @@ const WordList = props => {
   });
 
   return (
-    <ul className="rootWordList">
-      {words}
-    </ul>
+    <div className="rootWordList">
+      <div className="row">{words.slice(0,3)}</div>
+      <div className="row">{words.slice(3)}</div>
+    </div>
   );
 };
 

@@ -55,14 +55,14 @@ class App extends Component {
     } else {
       content = <Content name={this.state.chosenChildName}
                   definition={this.state.content_definition}
-                  gif_url={this.state.content_gif_url} />;
+                  gif_url={this.state.content_gif_url}/>;
     }
     return (
-      <div className="container">
+      <div className="container row">
         <div className="words small-8 columns">
           <WordList handleChildClick={this.handleChildClick} words={this.state.words} />
         </div>
-        <div className="content small-3 columns">
+        <div className="content small-4 columns">
           {content}
         </div>
       </div>
