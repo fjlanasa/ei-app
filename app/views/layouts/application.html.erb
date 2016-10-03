@@ -1,14 +1,41 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>EiApp</title>
-    <%= csrf_meta_tags %>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <%= stylesheet_link_tag    'application', media: 'all' %>
-    <%= javascript_include_tag 'application' %>
+    <title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.1.2/foundation.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
   </head>
 
   <body>
+    <div class="top-bar">
+      <div class="top-bar-right">
+        <ul class="menu">
+          <% if current_user %>
+            <li>
+              Welcome <strong><%= current_user.name %></strong>!
+              <img src= <%= current_user.image %>>
+            </li>
+            <li>
+              <a href='<%= signout_path %>' class="button" id="sign-out">Sign Out</a>
+            </li>
+          <% else %>
+            <li>
+              <a href="/auth/facebook" class="button" id="sign-in">Sign in with Facebook</a>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+
+
     <%= yield %>
+    <script src="https://cdn.jsdelivr.net/foundation/6.2.3/foundation.min.js"></script>
   </body>
 </html>

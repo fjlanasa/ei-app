@@ -15,8 +15,8 @@ class SecondLevelWord extends Component {
 
   render(){
     return (
-      <li onClick={this.props.handleChildClick}>
-        {this.props.name}
+      <li>
+        <a href="#" onClick={this.props.handleChildClick}>{this.props.name}</a>
       </li>
 
     );

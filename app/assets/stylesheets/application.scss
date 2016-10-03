@@ -1,5 +1,10 @@
 // @import "*";
+// @import "*";
 @import "foundation_and_overrides";
+
+body{
+  background-color: #F2ECCC;
+}
 
 .hidden{
   display: none;
@@ -10,8 +15,36 @@ ul{
   list-style: none;
 }
 
-li{
+#app{
+  height: 100%;
+}
 
+.button{
+  width: 100px;
+}
+
+#app>div{
+  height: 100%;
+}
+
+.container{
+  height: 100%;
+}
+
+.words{
+  height: 100%;
+}
+
+form{
+  height: 100%;
+}
+
+label{
+  height: 100%;
+}
+
+textarea{
+  height: 60% !important;
 }
 
 li:first-letter{
@@ -20,6 +53,23 @@ li:first-letter{
 
 .content{
   float:right;
+  height: 100%;
+}
+
+.content> div{
+  height: 100%;
+}
+
+.rootWord{
+  min-height: 40%;
+}
+
+.rootWordList{
+  height: 100%;
+}
+
+.rootWordList div{
+  min-height: 40%;
 }
 
 .rootWord:first-letter{
