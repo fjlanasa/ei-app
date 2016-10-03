@@ -64,8 +64,10 @@ words = [
 
 words.each do |word|
   word.each do |key, value|
+    Word.create(name: key)
     level_one_word = LevelOneWord.create(name: key)
     value.each do |word|
+      Word.create(name: word)
       LevelTwoWord.create(name: word, level_one_word_id: level_one_word.id)
     end
   end
