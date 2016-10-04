@@ -5,10 +5,8 @@ const SecondLevelWordList = props => {
 
   let words = props.words.map(word => {
     const {id, name } = word;
-    let handleChildClick = () => props.handleChildClick(id, name);
     return (
       <SecondLevelWord
-        handleChildClick={handleChildClick}
         key={id}
         name={name}
         id={id}
@@ -17,9 +15,10 @@ const SecondLevelWordList = props => {
   });
 
   return (
-    <ul className="inline-list">
+    <select onChange={props.handleChildClick}>
+      <option disabled selected value> -- select an option -- </option>
       {words}
-    </ul>
+    </select>
   );
 };
 
