@@ -14,10 +14,11 @@ class SecondLevelWord extends Component {
   }
 
   render(){
+    let value = this.props.id + ',' + this.props.name;
     return (
-      <li>
-        <a href="#" onClick={this.props.handleChildClick}>{this.props.name}</a>
-      </li>
+      <option value={value}>
+        {this.props.name}
+      </option>
 
     );
   }

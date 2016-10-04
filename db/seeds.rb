@@ -14,7 +14,9 @@ words = [
     "accepted",
     "proud",
     "interested",
-    "joyful"
+    "joyful",
+    "liberated",
+    "estatic",
     ]
   },
   {"surprise" => [
