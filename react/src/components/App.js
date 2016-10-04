@@ -18,6 +18,11 @@ class App extends Component {
     this.handleFormSubmit = this.handleFormSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
     this.getRootWords = this.getRootWords.bind(this);
+    this.handleClose = this.handleClose.bind(this);
+  }
+
+  handleClose() {
+    this.setState({chosenChildName: null})
   }
 
   getRootWords() {
@@ -93,7 +98,8 @@ class App extends Component {
                   definition={this.state.content_definition}
                   gif_url={this.state.content_gif_url}
                   handleFormSubmit={this.handleFormSubmit}
-                  handleChange={this.handleChange} />;
+                  handleChange={this.handleChange}
+                  handleClose={this.handleClose}/>;
     }
     return (
       <div className="container row">
