@@ -4,6 +4,10 @@ Rails.application.routes.draw do
   root 'static_pages#index'
 
   namespace :api do
+    resources :users, only: [:show]
+
+    resources :posts, only: [:index, :create, :destroy]
+
     resources :level_one_words do
       resources :level_two_words
     end

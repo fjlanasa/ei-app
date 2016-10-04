@@ -3,5 +3,6 @@ class LevelTwoWord < ActiveRecord::Base
   validates :level_one_word_id, presence: true
 
   belongs_to :level_one_word
+  has_many :posts
 
 end

@@ -9,4 +9,6 @@ class User < ActiveRecord::Base
       user.save!
     end
   end
+
+  has_many :posts
 end

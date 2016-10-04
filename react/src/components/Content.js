@@ -1,8 +1,9 @@
 import React, {Component} from 'react'
+import ContentForm from './ContentForm'
 
 const Content = props =>{
   return (
-    <div className="small-12 columns">
+    <div className="small-12 columns callout">
       <div className="row">
         <p>
           {props.name}
@@ -14,11 +15,8 @@ const Content = props =>{
           <img src={props.gif_url}/>
         </div>
       </div>
-      <form className = "row">
-        <label>Leave a note
-          <textarea type="text"/>
-        </label>
-      </form>
+      <ContentForm form_text={props.form_text}
+      handleFormSubmit={props.handleFormSubmit} handleChange={props.handleChange}/>
     </div>
   );
 }
