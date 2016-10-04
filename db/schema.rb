@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161003035643) do
+ActiveRecord::Schema.define(version: 20161004014052) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,6 +24,14 @@ ActiveRecord::Schema.define(version: 20161003035643) do
     t.integer "level_one_word_id", null: false
   end
 
+  create_table "posts", force: :cascade do |t|
+    t.text     "text",              null: false
+    t.integer  "user_id",           null: false
+    t.integer  "level_two_word_id", null: false
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+  end
+
   create_table "users", force: :cascade do |t|
     t.string   "provider",   null: false
     t.string   "uid",        null: false
@@ -33,10 +41,6 @@ ActiveRecord::Schema.define(version: 20161003035643) do
     t.datetime "updated_at", null: false
     t.string   "image"
     t.index ["uid", "provider"], name: "index_users_on_uid_and_provider", unique: true, using: :btree
-  end
-
-  create_table "words", force: :cascade do |t|
-    t.string "name", null: false
   end
 
 end

@@ -5,7 +5,7 @@ const SecondLevelWordList = props => {
 
   let words = props.words.map(word => {
     const {id, name } = word;
-    let handleChildClick = () => props.handleChildClick(name);
+    let handleChildClick = () => props.handleChildClick(id, name);
     return (
       <SecondLevelWord
         handleChildClick={handleChildClick}

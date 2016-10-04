@@ -23,6 +23,10 @@ ul{
   width: 100px;
 }
 
+.callout{
+  margin: 0px;
+}
+
 #app>div{
   height: 100%;
 }
@@ -43,8 +47,12 @@ label{
   height: 100%;
 }
 
-textarea{
-  height: 60% !important;
+.input-group{
+  height: 50%;
+}
+
+.input-group-field{
+  height: 100% !important;
 }
 
 li:first-letter{

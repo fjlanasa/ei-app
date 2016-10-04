@@ -10,6 +10,7 @@ gem  'foundation-rails', '~> 6.2', '>= 6.2.3.0'
 gem 'omniauth'
 gem 'omniauth-facebook', '1.4.0'
 group :development, :test do
+  gem 'dotenv-rails'
   gem 'capybara'
   gem 'factory_girl_rails'
   gem 'rspec-rails', '~> 3.0'
