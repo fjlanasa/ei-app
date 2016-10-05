@@ -4,6 +4,7 @@
 
 body{
   background-color: #F2ECCC;
+  font-size: 1em;
 }
 
 .close-btn{
@@ -12,6 +13,14 @@ body{
 
 .hidden{
   display: none;
+}
+
+.home{
+  margin: 20px;
+}
+
+.profile{
+  margin: 20px;
 }
 
 ul{
@@ -24,11 +33,16 @@ ul{
 }
 
 .button{
-  width: 100px;
+  width: 8em;
+  border: 1px solid white;
 }
 
 .callout{
   margin: 0px;
+}
+
+div.view{
+  height: 100%;
 }
 
 #app>div{
