@@ -6,11 +6,6 @@ class SecondLevelWord extends Component {
     this.state = {
       next_level_words: []
     };
-    this.handleClick = this.handleClick.bind(this);
-  }
-
-  handleClick() {
-    alert("Clicked!");
   }
 
   render(){
