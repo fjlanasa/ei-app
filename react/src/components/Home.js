@@ -7,6 +7,8 @@ class App extends Component {
     super(props);
     this.state = {
       words: [],
+      chosenParentName: null,
+      chosenParentId: null,
       chosenChildName: null,
       chosenChildId: null,
       content_definition: null,
@@ -14,6 +16,7 @@ class App extends Component {
       current_user_id: null,
       form_text: ''
     }
+    this.handleParentClick = this.handleParentClick.bind(this);
     this.handleChildClick = this.handleChildClick.bind(this);
     this.handleFormSubmit = this.handleFormSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
@@ -40,7 +43,6 @@ class App extends Component {
   }
 
   handleFormSubmit(event){
-    debugger;
     event.preventDefault();
     $.ajax({
       type: "POST",
@@ -53,7 +55,6 @@ class App extends Component {
   }
 
   handleChildClick(event){
-    debugger;
     let name = event.target.value.split(",")[1];
     let id = event.target.value.split(",")[0];
     let url2 = `https://wordsapiv1.p.mashape.com/words/${name}`;
@@ -77,6 +78,10 @@ class App extends Component {
       }
     );
 	}
+
+  handleParentClick(name){
+    this.setState({chosenParentName: name});
+  }
 
   handleChange(event) {
     let newText = event.target.value;
@@ -104,7 +109,11 @@ class App extends Component {
     return (
       <div className="container row">
         <div className="words small-8 columns">
-          <WordList handleChildClick={this.handleChildClick} words={this.state.words} />
+          <WordList handleParentClick={this.handleParentClick}
+            handleChildClick={this.handleChildClick}
+            chosenParentName={this.state.chosenParentName}
+              words={this.state.words}
+          />
         </div>
         <div className="content small-4 columns">
           {content}
