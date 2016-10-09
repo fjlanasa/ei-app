@@ -5,10 +5,11 @@ const WordList = props => {
 
   let words = props.words.map(word => {
     const {id, name } = word;
-    // let handleClick = () => props.handleButtonClick(name);
-    // debugger;
+    let handleParentClick = () => props.handleParentClick(name);
     return (
       <Word
+        chosenParentName = {props.chosenParentName}
+        handleParentClick = {handleParentClick}
         handleChildClick = {props.handleChildClick}
         key={id}
         name={name}
