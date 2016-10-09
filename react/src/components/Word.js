@@ -42,8 +42,10 @@ class Word extends Component {
   }
 
   componentWillReceiveProps(nextProps){
-    if(this.props.name == nextProps.chosenParentName){
-      this.handleClick();
+    if(this.props.name == nextProps.chosenParentName) {
+      if(this.state.clicked != true){
+        this.handleClick();
+      }
     } else {
       this.setState({clicked: false});
     }
