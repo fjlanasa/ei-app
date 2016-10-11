@@ -6,6 +6,16 @@ body{
   font-size: 1em;
 }
 
+a {
+  color: black;
+}
+
+
+
+.sign-in {
+  float: right;
+}
+
 .word-dets {
   font-family: "Palatino Linotype";
 }
@@ -14,9 +24,27 @@ body{
   float: right;
 }
 
+.nav-buttons {
+  background-color: #FFDB00;
+  margin-bottom: 50px;
+  height: 70px;
+}
+
 .button{
   background-color: #FFDB00;
   color: black;
+}
+
+button.button.facebook {
+  background-color: #3B5998;
+  color: white;
+  height: 40px;
+}
+
+button.button.facebook:hover {
+  background-color: #4285F4;
+  color: white;
+  height: 40px;
 }
 
 .button:hover {

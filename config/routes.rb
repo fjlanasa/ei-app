@@ -8,9 +8,9 @@ Rails.application.routes.draw do
 
     resources :posts, only: [:index, :create, :destroy]
 
-    resources :level_one_words do
-      resources :level_two_words
-    end
+    resources :level_one_words
+
+    resources :level_two_words
   end
 
   match 'auth/:provider/callback', to: 'sessions#create', via: [:get, :post]
