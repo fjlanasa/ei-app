@@ -3,12 +3,25 @@
 @import "foundation_and_overrides";
 
 body{
-  background-color: #F2ECCC;
   font-size: 1em;
+}
+
+.word-dets {
+  font-family: "Palatino Linotype";
 }
 
 .close-btn{
   float: right;
+}
+
+.button{
+  background-color: #FFDB00;
+  color: black;
+}
+
+.button:hover {
+  background-color: black;
+  color: #FFDB00;
 }
 
 .hidden{
@@ -80,6 +93,7 @@ li:first-letter{
 .content{
   float:right;
   height: 100%;
+  font-family: "Palatino Linotype";
 }
 
 .content> div{
