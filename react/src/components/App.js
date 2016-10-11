@@ -37,15 +37,17 @@ class App extends Component {
     }
     return (
       <div className="view">
-        <button onClick={this.handleHomeClick} className="home">
-          Home
-        </button>
-        <button onClick={this.handleProfileClick} className="profile">
-          Profile
-        </button>
-        <button onClick={this.handlePostsClick} className="posts">
-          All Posts
-        </button>
+        <div className="nav-buttons">
+          <button onClick={this.handleHomeClick} className="home">
+            Home
+          </button>
+          <button onClick={this.handleProfileClick} className="profile">
+            Profile
+          </button>
+          <button onClick={this.handlePostsClick} className="posts">
+            All Posts
+          </button>
+        </div>
         {page}
       </div>
     )

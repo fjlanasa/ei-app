@@ -14,10 +14,8 @@
   </head>
 
   <body>
-    <div class="top-bar">
-      <div class="top-bar-right">
-      </div>
-      <div class="top-bar-right">
+    <div class="sign-in">
+      <div>
         <ul class="menu">
           <% if current_user %>
             <li>
@@ -25,11 +23,11 @@
               <img src= <%= current_user.image %>>
             </li>
             <li>
-              <a href='<%= signout_path %>' class="button" id="sign-out">Sign Out</a>
+              <a href='<%= signout_path %>' id="sign-out">Sign Out</a>
             </li>
           <% else %>
             <li>
-              <a href="/auth/facebook" class="button" id="sign-in">Sign in with Facebook</a>
+              <a href="/auth/facebook" id="sign-in">Sign in with Facebook</a>
             </li>
           <% end %>
         </ul>
