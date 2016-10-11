@@ -4,7 +4,7 @@ import SecondLevelWordList from './SecondLevelWordList';
 
 const WordDetails = props => {
   return(
-    <div>
+    <div className="word-dets">
       <p>
         Definition: {props.definition}
       </p>
