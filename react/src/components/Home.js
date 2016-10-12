@@ -57,19 +57,18 @@ class App extends Component {
   handleChildClick(event){
     let name = event.target.value.split(",")[1];
     let id = event.target.value.split(",")[0];
-      $.ajax({
-        url: 'api/level_two_words',
-        contentType: 'application/json',
-        data: { name: name, id: id }
-      }).done((data)=> {
-        this.setState({
-          chosenChildName: name,
-          chosenChildId: id,
-          content_definition: data.definition,
-          content_gif_url: data.gif_url
-        });
-      }
-    );
+    $.ajax({
+      url: 'api/level_two_words',
+      contentType: 'application/json',
+      data: { name: name, id: id }
+    }).done((data)=> {
+      this.setState({
+        chosenChildName: name,
+        chosenChildId: id,
+        content_definition: data.definition,
+        content_gif_url: data.gif_url
+      });
+    });
 	}
 
   handleParentClick(name){

@@ -17,28 +17,18 @@ class Word extends Component {
     let url = `api/level_one_words/${this.props.id}`;
     let url2 = `https://wordsapiv1.p.mashape.com/words/${this.props.name}`;
     let url3 = `http://api.giphy.com/v1/gifs/search?q=${this.props.name}&api_key=dc6zaTOxFJmzC`
-    $.when(
-      $.ajax({
+    $.ajax({
         url: url,
-        contentType: 'application/json'
-      }),
-      $.ajax({
-        url: url2,
-        headers: {"X-Mashape-Key": "tWoEhzcNoImshNr61g8SmApOU9LBp1Llbr2jsn2vvnaJD0KZrj"},
-        contentType: 'application/json'
-      }),
-      $.ajax({
-        url: url3,
-        contentType: 'application/json'
-      })).done((words, def, url)=> {
-        this.setState({
-          next_level_words: words[0].level_two_words,
-          definition: def[0].results[0].definition,
-          gif_url: url[0].data[Math.floor((Math.random() * url[0].data.length))].images.fixed_height.url,
-          clicked: true
-        });
-      }
-    );
+        contentType: 'application/json',
+        data: { name: this.props.name }
+    }).done((data)=> {
+      this.setState({
+        next_level_words: data.level_two_words,
+        definition: data.definition,
+        gif_url: data.gif_url,
+        clicked: true
+      });
+    });
   }
 
   componentWillReceiveProps(nextProps){
