@@ -57,26 +57,18 @@ class App extends Component {
   handleChildClick(event){
     let name = event.target.value.split(",")[1];
     let id = event.target.value.split(",")[0];
-    let url2 = `https://wordsapiv1.p.mashape.com/words/${name}`;
-    let url3 = `http://api.giphy.com/v1/gifs/search?q=${name}&api_key=dc6zaTOxFJmzC`;
-    $.when(
-      $.ajax({
-        url: url2,
-        headers: {"X-Mashape-Key": "tWoEhzcNoImshNr61g8SmApOU9LBp1Llbr2jsn2vvnaJD0KZrj"},
-        contentType: 'application/json'
-      }),
-      $.ajax({
-        url: url3,
-        contentType: 'application/json'
-      })).done((def, url)=> {
-        this.setState({
-          chosenChildName: name,
-          chosenChildId: id,
-          content_definition: def[0].results[0].definition,
-          content_gif_url: url[0].data[Math.floor((Math.random() * url[0].data.length))].images.fixed_height.url
-        });
-      }
-    );
+    $.ajax({
+      url: 'api/level_two_words',
+      contentType: 'application/json',
+      data: { name: name, id: id }
+    }).done((data)=> {
+      this.setState({
+        chosenChildName: name,
+        chosenChildId: id,
+        content_definition: data.definition,
+        content_gif_url: data.gif_url
+      });
+    });
 	}
 
   handleParentClick(name){
