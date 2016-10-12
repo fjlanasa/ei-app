@@ -16,6 +16,10 @@ a {
   float: right;
 }
 
+.button {
+  font-size: larger;
+}
+
 .word-dets {
   font-family: "Palatino Linotype";
 }
@@ -76,6 +80,11 @@ ul{
 .button{
   width: 8em;
   border: 1px solid white;
+  border-radius: 10px;
+}
+
+.button::first-letter {
+  text-transform: capitalize;
 }
 
 .callout{
