@@ -15,8 +15,6 @@ class Word extends Component {
 
   handleClick(){
     let url = `api/level_one_words/${this.props.id}`;
-    let url2 = `https://wordsapiv1.p.mashape.com/words/${this.props.name}`;
-    let url3 = `http://api.giphy.com/v1/gifs/search?q=${this.props.name}&api_key=dc6zaTOxFJmzC`
     $.ajax({
         url: url,
         contentType: 'application/json',
