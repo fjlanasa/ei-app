@@ -33,7 +33,11 @@
         </ul>
       </div>
     </div>
-
+    <% flash.each do |key, value| %>
+      <div class='flash-alert'>
+        <%= value %>
+      </div>
+    <% end %>
 
     <%= yield %>
     <script src="https://cdn.jsdelivr.net/foundation/6.2.3/foundation.min.js"></script>

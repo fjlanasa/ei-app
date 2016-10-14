@@ -5,6 +5,7 @@ const ContentForm = props =>{
     <form onSubmit={props.handleFormSubmit} className = "row" id="content-form">
         <div className="input-group">
           <textarea
+            required
             form="content-form"
             className="textarea"
             cols="5"

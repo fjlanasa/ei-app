@@ -25,9 +25,9 @@ class Api::PostsController < ApiController
   def create
     post = Post.new(post_params)
     if post.save
-      render json: { post: post }, status: :created
+      render json: { post: post, messages: ["Your post was created! Check 'Your Posts'"]}, status: :ok
     else
-      render json: { errors: post.errors }, status: :unprocessable_entity
+      render json: { messages: post.errors.full_messages }, status: :ok
     end
   end
 

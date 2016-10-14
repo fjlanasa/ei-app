@@ -14,7 +14,8 @@ class App extends Component {
       content_definition: null,
       content_gif_url: null,
       current_user_id: null,
-      form_text: ''
+      form_text: '',
+      form_error: ''
     }
     this.handleParentClick = this.handleParentClick.bind(this);
     this.handleChildClick = this.handleChildClick.bind(this);
@@ -49,7 +50,9 @@ class App extends Component {
       url: '/api/posts',
       contentType: 'application/json',
       data: JSON.stringify({ post: {text: this.state.form_text, level_two_word_id: this.state.chosenChildId, user_id: this.state.current_user_id}})
-    }).done(()=>{
+    }).done((data)=>{
+      debugger;
+      alert(data.messages[0]);
       this.getRootWords();
     });
   }
@@ -92,6 +95,7 @@ class App extends Component {
     } else {
       content = <Content name={this.state.chosenChildName}
                   id={this.state.chosenChildId} form_text={this.state.form_text}
+                  form_error={this.state.form_error}
                   definition={this.state.content_definition}
                   gif_url={this.state.content_gif_url}
                   handleFormSubmit={this.handleFormSubmit}
