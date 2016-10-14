@@ -7,14 +7,14 @@ const Content = props =>{
       <button onClick={props.handleClose} className="close-btn">
         <i className="fa fa-times" aria-hidden="true"></i>
       </button>
-      <div className="row">
+      <div className="content-meat">
         <p>
           {props.name}
         </p>
         <p>
-          {props.definition}
+          Definition: {props.definition}
         </p>
-        <div>
+        <div className="small-12">
           <img src={props.gif_url}/>
         </div>
       </div>

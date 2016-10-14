@@ -24,12 +24,17 @@ class Profile extends Component {
   render(){
     return (
       <div>
+        Your posts:
         <ul>
           {this.state.posts.map(post=>{
-            return <li>{post.name}<br/>
-                        {post.text}<br/>
+            return (
+                <div className='callout'>
+                  <li className='post-content'><strong>{post.name}</strong><br/>
+                        <em>{post.text}</em><br/>
                         Created at: {post.created_at}<br/>
                    </li>
+                </div>
+            );
           })
         }
         </ul>

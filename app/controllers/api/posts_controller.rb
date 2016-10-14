@@ -15,6 +15,9 @@ class Api::PostsController < ApiController
 
       render json: { posts: posts, current_user_posts: user_posts}, status: :ok
     else
+      all_posts_sql = "select level_two_words.name, posts.text, posts.created_at from " \
+      "posts join level_two_words on posts.level_two_word_id = level_two_words.id order by posts.created_at desc;"
+      posts = ActiveRecord::Base.connection.execute(all_posts_sql)
       render json: {posts: posts}
     end
   end

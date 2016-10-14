@@ -42,7 +42,7 @@ class App extends Component {
             Home
           </button>
           <button onClick={this.handleProfileClick} className="profile">
-            Profile
+            Your Posts
           </button>
           <button onClick={this.handlePostsClick} className="posts">
             All Posts

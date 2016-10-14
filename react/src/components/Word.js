@@ -41,18 +41,20 @@ class Word extends Component {
 
   render(){
     let wordDetailsComponent;
+    let buttonclass = 'button';
     if(this.state.clicked == true){
       wordDetailsComponent = <WordDetails handleChildClick = {this.props.handleChildClick}
                               words={this.state.next_level_words} definition={this.state.definition}
                               gif_url={this.state.gif_url} />;
+      buttonclass = 'button chosen';
     } else {
       wordDetailsComponent = null;
     }
 
 
     return (
-      <div className="rootWord small-4 columns">
-          <div className="button" onClick={this.props.handleParentClick}>
+      <div className='rootWord small-12 medium-6 large-6 columns'>
+          <div className={buttonclass} onClick={this.props.handleParentClick}>
             {this.props.name}
           </div>
           {wordDetailsComponent}
