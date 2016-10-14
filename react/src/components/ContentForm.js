@@ -14,7 +14,7 @@ const ContentForm = props =>{
           >Enter Something...</textarea>
         </div>
         <div className="input-group-button">
-            <input type="submit" className="button" value="Add To List" />
+            <input type="submit" className="button" value="Add a Post" />
         </div>
     </form>
   )

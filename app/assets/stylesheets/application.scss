@@ -10,7 +10,9 @@ a {
   color: black;
 }
 
-
+h5 {
+  margin: 15px;
+}
 
 .sign-in {
   float: right;
@@ -39,6 +41,19 @@ a {
   color: black;
 }
 
+#content-form {
+  max-height: 80%;
+}
+
+.post-content {
+  margin: 20px;
+}
+
+.content-meat {
+  margin: 2px;
+  width: 95%;
+}
+
 button.button.facebook {
   background-color: #3B5998;
   color: white;
@@ -52,6 +67,11 @@ button.button.facebook:hover {
 }
 
 .button:hover {
+  background-color: black;
+  color: #FFDB00;
+}
+
+.chosen {
   background-color: black;
   color: #FFDB00;
 }
@@ -83,7 +103,11 @@ ul{
   border-radius: 10px;
 }
 
-.button::first-letter {
+.button:first-letter {
+  text-transform: capitalize;
+}
+
+p:first-letter {
   text-transform: capitalize;
 }
 
@@ -96,9 +120,9 @@ div.view{
 }
 
 textarea {
-  margin: 20px auto;
+  margin: 5px auto;
   width: 90%;
-  height: 90%;
+  height: 100%;
 }
 
 #app>div{
