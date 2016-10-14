@@ -51,7 +51,7 @@ class Word extends Component {
 
 
     return (
-      <div className="rootWord small-4 columns">
+      <div className="rootWord small-12 medium-6 large-6 columns">
           <div className="button" onClick={this.props.handleParentClick}>
             {this.props.name}
           </div>
