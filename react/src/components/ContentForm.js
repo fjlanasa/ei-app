@@ -8,7 +8,6 @@ const ContentForm = props =>{
             form="content-form"
             className="textarea"
             cols="5"
-            rows="20"
             wrap="hard"
             value={props.form_text}
             onChange={props.handleChange}
