@@ -8,14 +8,13 @@ const ContentForm = props =>{
             form="content-form"
             className="textarea"
             cols="5"
-            rows="20"
             wrap="hard"
             value={props.form_text}
             onChange={props.handleChange}
           >Enter Something...</textarea>
         </div>
         <div className="input-group-button">
-            <input type="submit" className="button" value="Add To List" />
+            <input type="submit" className="button" value="Add a Post" />
         </div>
     </form>
   )

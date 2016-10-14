@@ -100,14 +100,14 @@ class App extends Component {
     }
     return (
       <div className="container row">
-        <div className="words small-8 columns">
+        <div className="words small-6 medium-8 columns">
           <WordList handleParentClick={this.handleParentClick}
             handleChildClick={this.handleChildClick}
             chosenParentName={this.state.chosenParentName}
               words={this.state.words}
           />
         </div>
-        <div className="content small-4 columns">
+        <div className="content small-6 medium-4 columns">
           {content}
         </div>
       </div>
