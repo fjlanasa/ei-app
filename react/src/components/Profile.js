@@ -24,7 +24,7 @@ class Profile extends Component {
   render(){
     return (
       <div>
-        Your posts:
+        <h5>Your posts:</h5>
         <ul>
           {this.state.posts.map(post=>{
             return (
